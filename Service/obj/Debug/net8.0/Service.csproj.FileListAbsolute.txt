@@ -1,0 +1,11 @@
+D:\PRN212\HospitalManagementSystem\Service\bin\Debug\net8.0\Service.deps.json
+D:\PRN212\HospitalManagementSystem\Service\bin\Debug\net8.0\Service.dll
+D:\PRN212\HospitalManagementSystem\Service\bin\Debug\net8.0\Service.pdb
+D:\PRN212\HospitalManagementSystem\Service\obj\Debug\net8.0\Service.GeneratedMSBuildEditorConfig.editorconfig
+D:\PRN212\HospitalManagementSystem\Service\obj\Debug\net8.0\Service.AssemblyInfoInputs.cache
+D:\PRN212\HospitalManagementSystem\Service\obj\Debug\net8.0\Service.AssemblyInfo.cs
+D:\PRN212\HospitalManagementSystem\Service\obj\Debug\net8.0\Service.csproj.CoreCompileInputs.cache
+D:\PRN212\HospitalManagementSystem\Service\obj\Debug\net8.0\Service.dll
+D:\PRN212\HospitalManagementSystem\Service\obj\Debug\net8.0\refint\Service.dll
+D:\PRN212\HospitalManagementSystem\Service\obj\Debug\net8.0\Service.pdb
+D:\PRN212\HospitalManagementSystem\Service\obj\Debug\net8.0\ref\Service.dll

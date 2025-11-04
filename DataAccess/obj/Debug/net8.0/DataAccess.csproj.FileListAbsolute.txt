@@ -1,0 +1,17 @@
+D:\PRN212\HospitalManagementSystem\DataAccess\bin\Debug\net8.0\DataAccess.deps.json
+D:\PRN212\HospitalManagementSystem\DataAccess\bin\Debug\net8.0\DataAccess.dll
+D:\PRN212\HospitalManagementSystem\DataAccess\bin\Debug\net8.0\DataAccess.pdb
+D:\PRN212\HospitalManagementSystem\DataAccess\obj\Debug\net8.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+D:\PRN212\HospitalManagementSystem\DataAccess\obj\Debug\net8.0\DataAccess.AssemblyInfoInputs.cache
+D:\PRN212\HospitalManagementSystem\DataAccess\obj\Debug\net8.0\DataAccess.AssemblyInfo.cs
+D:\PRN212\HospitalManagementSystem\DataAccess\obj\Debug\net8.0\DataAccess.csproj.CoreCompileInputs.cache
+D:\PRN212\HospitalManagementSystem\DataAccess\obj\Debug\net8.0\DataAccess.dll
+D:\PRN212\HospitalManagementSystem\DataAccess\obj\Debug\net8.0\refint\DataAccess.dll
+D:\PRN212\HospitalManagementSystem\DataAccess\obj\Debug\net8.0\DataAccess.pdb
+D:\PRN212\HospitalManagementSystem\DataAccess\obj\Debug\net8.0\ref\DataAccess.dll
+D:\PRN212\HospitalManagementSystem\DataAccess\bin\Debug\net8.0\DataAccess.runtimeconfig.json
+D:\PRN212\HospitalManagementSystem\DataAccess\bin\Debug\net8.0\Business.dll
+D:\PRN212\HospitalManagementSystem\DataAccess\bin\Debug\net8.0\Business.pdb
+D:\PRN212\HospitalManagementSystem\DataAccess\obj\Debug\net8.0\DataAccess.csproj.AssemblyReference.cache
+D:\PRN212\HospitalManagementSystem\DataAccess\obj\Debug\net8.0\DataAccess.csproj.Up2Date
+D:\PRN212\HospitalManagementSystem\DataAccess\obj\Debug\net8.0\DataAccess.genruntimeconfig.cache

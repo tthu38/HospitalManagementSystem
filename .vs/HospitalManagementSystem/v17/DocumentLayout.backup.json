@@ -1,0 +1,146 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\PRN212\\HospitalManagementSystem\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{837D64AB-FD4B-4EF2-9CC1-6B70C2D23B24}|DataAccess\\DataAccess.csproj|d:\\prn212\\hospitalmanagementsystem\\dataaccess\\dataaccess.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{837D64AB-FD4B-4EF2-9CC1-6B70C2D23B24}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\dataaccess.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1A7D393-D895-43BD-B409-7993438523D2}|HospitalApp\\HospitalApp.csproj|d:\\prn212\\hospitalmanagementsystem\\hospitalapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B1A7D393-D895-43BD-B409-7993438523D2}|HospitalApp\\HospitalApp.csproj|solutionrelative:hospitalapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1A7D393-D895-43BD-B409-7993438523D2}|HospitalApp\\HospitalApp.csproj|d:\\prn212\\hospitalmanagementsystem\\hospitalapp\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1A7D393-D895-43BD-B409-7993438523D2}|HospitalApp\\HospitalApp.csproj|solutionrelative:hospitalapp\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{987F0B84-9A60-41A4-9D0F-829A7582FA45}|Service\\Service.csproj|d:\\prn212\\hospitalmanagementsystem\\service\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{987F0B84-9A60-41A4-9D0F-829A7582FA45}|Service\\Service.csproj|solutionrelative:service\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F951A90-51F9-4A80-AE01-7519BA49E304}|Repository\\Repository.csproj|d:\\prn212\\hospitalmanagementsystem\\repository\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8F951A90-51F9-4A80-AE01-7519BA49E304}|Repository\\Repository.csproj|solutionrelative:repository\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{837D64AB-FD4B-4EF2-9CC1-6B70C2D23B24}|DataAccess\\DataAccess.csproj|d:\\prn212\\hospitalmanagementsystem\\dataaccess\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{837D64AB-FD4B-4EF2-9CC1-6B70C2D23B24}|DataAccess\\DataAccess.csproj|solutionrelative:dataaccess\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9110EF6-5723-4D99-BEE8-CAB1DC88E530}|Business\\Business.csproj|d:\\prn212\\hospitalmanagementsystem\\business\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9110EF6-5723-4D99-BEE8-CAB1DC88E530}|Business\\Business.csproj|solutionrelative:business\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DataAccess",
+              "DocumentMoniker": "D:\\PRN212\\HospitalManagementSystem\\DataAccess\\DataAccess.csproj",
+              "RelativeDocumentMoniker": "DataAccess\\DataAccess.csproj",
+              "ToolTip": "D:\\PRN212\\HospitalManagementSystem\\DataAccess\\DataAccess.csproj",
+              "RelativeToolTip": "DataAccess\\DataAccess.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-11-04T08:03:37.537Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "D:\\PRN212\\HospitalManagementSystem\\HospitalApp\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "HospitalApp\\MainWindow.xaml",
+              "ToolTip": "D:\\PRN212\\HospitalManagementSystem\\HospitalApp\\MainWindow.xaml",
+              "RelativeToolTip": "HospitalApp\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-04T08:03:31.279Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "D:\\PRN212\\HospitalManagementSystem\\HospitalApp\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "HospitalApp\\MainWindow.xaml.cs",
+              "ToolTip": "D:\\PRN212\\HospitalManagementSystem\\HospitalApp\\MainWindow.xaml.cs",
+              "RelativeToolTip": "HospitalApp\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-04T08:03:30.921Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "D:\\PRN212\\HospitalManagementSystem\\Service\\Class1.cs",
+              "RelativeDocumentMoniker": "Service\\Class1.cs",
+              "ToolTip": "D:\\PRN212\\HospitalManagementSystem\\Service\\Class1.cs",
+              "RelativeToolTip": "Service\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-04T08:03:13.177Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "D:\\PRN212\\HospitalManagementSystem\\Repository\\Class1.cs",
+              "RelativeDocumentMoniker": "Repository\\Class1.cs",
+              "ToolTip": "D:\\PRN212\\HospitalManagementSystem\\Repository\\Class1.cs",
+              "RelativeToolTip": "Repository\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-04T08:02:58.145Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "D:\\PRN212\\HospitalManagementSystem\\DataAccess\\Class1.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Class1.cs",
+              "ToolTip": "D:\\PRN212\\HospitalManagementSystem\\DataAccess\\Class1.cs",
+              "RelativeToolTip": "DataAccess\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-04T08:02:42.316Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "D:\\PRN212\\HospitalManagementSystem\\Business\\Class1.cs",
+              "RelativeDocumentMoniker": "Business\\Class1.cs",
+              "ToolTip": "D:\\PRN212\\HospitalManagementSystem\\Business\\Class1.cs",
+              "RelativeToolTip": "Business\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-04T08:02:22.9Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{269a02dc-6af8-11d3-bdc4-00c04f688e50}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
