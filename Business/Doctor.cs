@@ -13,6 +13,10 @@ public partial class Doctor
 
     public string? Specialization { get; set; }
 
+    public string Username { get; set; } = null!;
+
+    public string Password { get; set; } = null!;
+
     public virtual ICollection<Appointment> Appointments { get; set; } = new List<Appointment>();
 
     public virtual Department? Department { get; set; }

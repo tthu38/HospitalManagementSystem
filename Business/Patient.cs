@@ -15,6 +15,10 @@ public partial class Patient
 
     public string? Address { get; set; }
 
+    public string Username { get; set; } = null!;
+
+    public string Password { get; set; } = null!;
+
     public virtual ICollection<Admission> Admissions { get; set; } = new List<Admission>();
 
     public virtual ICollection<Appointment> Appointments { get; set; } = new List<Appointment>();
