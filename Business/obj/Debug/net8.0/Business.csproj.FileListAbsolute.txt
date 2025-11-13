@@ -9,3 +9,15 @@ D:\PRN212\HospitalManagementSystem\Business\obj\Debug\net8.0\Business.dll
 D:\PRN212\HospitalManagementSystem\Business\obj\Debug\net8.0\refint\Business.dll
 D:\PRN212\HospitalManagementSystem\Business\obj\Debug\net8.0\Business.pdb
 D:\PRN212\HospitalManagementSystem\Business\obj\Debug\net8.0\ref\Business.dll
+D:\DOTNET\HospitalManagementSystem\Business\bin\Debug\net8.0\Business.deps.json
+D:\DOTNET\HospitalManagementSystem\Business\bin\Debug\net8.0\Business.dll
+D:\DOTNET\HospitalManagementSystem\Business\bin\Debug\net8.0\Business.pdb
+D:\DOTNET\HospitalManagementSystem\Business\obj\Debug\net8.0\Business.GeneratedMSBuildEditorConfig.editorconfig
+D:\DOTNET\HospitalManagementSystem\Business\obj\Debug\net8.0\Business.AssemblyInfoInputs.cache
+D:\DOTNET\HospitalManagementSystem\Business\obj\Debug\net8.0\Business.AssemblyInfo.cs
+D:\DOTNET\HospitalManagementSystem\Business\obj\Debug\net8.0\Business.csproj.CoreCompileInputs.cache
+D:\DOTNET\HospitalManagementSystem\Business\obj\Debug\net8.0\Business.sourcelink.json
+D:\DOTNET\HospitalManagementSystem\Business\obj\Debug\net8.0\Business.dll
+D:\DOTNET\HospitalManagementSystem\Business\obj\Debug\net8.0\refint\Business.dll
+D:\DOTNET\HospitalManagementSystem\Business\obj\Debug\net8.0\Business.pdb
+D:\DOTNET\HospitalManagementSystem\Business\obj\Debug\net8.0\ref\Business.dll

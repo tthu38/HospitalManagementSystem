@@ -1,12 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using Business;
+using Repository;
 
 namespace Service
 {
-    internal class DepartmentService
+    public class DepartmentService
     {
+        private readonly IDepartmentRepository repo;
+
+        public DepartmentService()
+        {
+            repo = new DepartmentRepository();
+        }
+
+        public List<Department> GetAll()
+        {
+            return repo.GetAll();
+        }
     }
 }

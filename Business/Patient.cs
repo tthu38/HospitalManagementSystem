@@ -19,7 +19,11 @@ public partial class Patient
 
     public string Password { get; set; } = null!;
 
+    public bool? IsActive { get; set; }
+
     public virtual ICollection<Admission> Admissions { get; set; } = new List<Admission>();
 
     public virtual ICollection<Appointment> Appointments { get; set; } = new List<Appointment>();
+
+    public virtual ICollection<Feedback> Feedbacks { get; set; } = new List<Feedback>();
 }

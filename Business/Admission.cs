@@ -11,9 +11,10 @@ public partial class Admission
 
     public int? RoomId { get; set; }
 
-    public DateOnly? AdmissionDate { get; set; }
+    public DateTime AdmissionDate { get; set; }   // ✅ DateTime
+    public DateTime? DischargeDate { get; set; }  // ✅ DateTime?
+    public string? Status { get; set; }
 
-    public DateOnly? DischargeDate { get; set; }
 
     public virtual ICollection<Billing> Billings { get; set; } = new List<Billing>();
 

@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using Business;
 
 namespace Repository
 {
-    internal interface IAdmissionRepository
+    public interface IAdmissionRepository
     {
+        List<Admission> GetAll();
+        Admission? GetById(int id);
+        void Add(Admission admission);
+        void Discharge(int admissionId);
     }
 }

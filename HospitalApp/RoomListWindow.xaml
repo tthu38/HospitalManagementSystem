@@ -1,0 +1,45 @@
+﻿<UserControl x:Class="HospitalApp.RoomListWindow"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Manage Rooms"
+                   FontSize="22"
+                   FontWeight="Bold"
+                   Foreground="{StaticResource DarkBlue}"
+                   Margin="0,0,0,12"/>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="0,0,0,10">
+            <Button Content="Add Room" Width="110"
+                    Style="{StaticResource PrimaryButton}"
+                    Click="BtnAdd_Click"/>
+            <Button Content="Edit Room" Width="120"
+                    Margin="10,0,0,0"
+                    Style="{StaticResource PrimaryButton}"
+                    Click="BtnEdit_Click"/>
+            <Button Content="Toggle Availability" Width="160"
+                    Margin="10,0,0,0"
+                    Style="{StaticResource PrimaryButton}"
+                    Click="BtnToggle_Click"/>
+        </StackPanel>
+
+        <DataGrid x:Name="dgRooms"
+                  Grid.Row="2"
+                  AutoGenerateColumns="False"
+                  IsReadOnly="True"
+                  SelectionMode="Single"
+                  CanUserAddRows="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding RoomId}" Width="50"/>
+                <DataGridTextColumn Header="Room Number" Binding="{Binding RoomNumber}" Width="150"/>
+                <DataGridTextColumn Header="Room Type" Binding="{Binding RoomType}" Width="150"/>
+                <DataGridCheckBoxColumn Header="Available" Binding="{Binding IsAvailable}" Width="100"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>

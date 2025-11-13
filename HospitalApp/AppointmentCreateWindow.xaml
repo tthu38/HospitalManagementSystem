@@ -1,0 +1,51 @@
+﻿<Window x:Class="HospitalApp.AppointmentCreateWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Create Appointment"
+        Height="480" Width="520"
+        WindowStartupLocation="CenterScreen"
+        Background="{StaticResource BgBrush}">
+
+    <Grid Margin="20">
+        <Border Background="White"
+                CornerRadius="10"
+                Padding="20"
+                Effect="{StaticResource ShadowEffect}">
+            <StackPanel>
+                <TextBlock Text="Book Appointment"
+                           FontSize="22"
+                           FontWeight="Bold"
+                           Foreground="{StaticResource PrimaryBrush}"
+                           Margin="0,0,0,20"/>
+
+                <TextBlock Text="Doctor" Foreground="{StaticResource TextGrayBrush}"/>
+                <ComboBox x:Name="cbDoctor"
+                          Height="32"
+                          Margin="0,2,0,10"
+                          DisplayMemberPath="FullName"/>
+
+                <TextBlock Text="Date"
+                           Foreground="{StaticResource TextGrayBrush}"/>
+                <DatePicker x:Name="dpDate"
+                            Height="32"
+                            Margin="0,2,0,10"/>
+
+                <TextBlock Text="Time (HH:mm)"
+                           Foreground="{StaticResource TextGrayBrush}"/>
+                <TextBox x:Name="txtTime"
+                     Height="32"
+                     Margin="0,2,0,20"
+                     Text="HH:mm"
+                     GotFocus="TextBox_GotFocus"
+                     LostFocus="TextBox_LostFocus"/>
+
+
+                <Button Content="Create Appointment"
+                        Height="38"
+                        HorizontalAlignment="Right"
+                        Style="{StaticResource PrimaryButton}"
+                        Click="BtnSave_Click"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>

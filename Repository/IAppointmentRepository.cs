@@ -1,12 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using Business;
 
 namespace Repository
 {
-    internal interface IAppointmentRepository
+    public interface IAppointmentRepository
     {
+        List<Appointment> GetAll();
+        Appointment? GetById(int id);
+        void Add(Appointment appointment);
+        void UpdateStatus(int id, string status);
+        List<Appointment> GetByDoctor(int doctorId);
+        List<Appointment> GetByPatient(int patientId);
+        void UpdateNotes(int id, string? notes);
     }
 }

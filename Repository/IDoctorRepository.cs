@@ -1,12 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using Business;
 
 namespace Repository
 {
-    internal interface IDoctorRepository
+    public interface IDoctorRepository
     {
+        List<Doctor> GetAll();
+        Doctor? GetById(int id);
+        void Add(Doctor doctor);
+        void Update(Doctor doctor);
+        void SetActive(int id, bool active);
+        Doctor? Login(string username, string password);
     }
 }

@@ -1,0 +1,22 @@
+﻿<Window x:Class="HospitalApp.AppointmentNotesWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Appointment Notes"
+        Height="300" Width="400"
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="20">
+        <StackPanel>
+            <TextBlock Text="Add Notes" FontSize="18" FontWeight="Bold" Margin="0,0,0,10"/>
+            <TextBox x:Name="txtNotes"
+                     Height="150"
+                     AcceptsReturn="True"
+                     TextWrapping="Wrap"
+                     Margin="0,0,0,10"/>
+            <Button Content="Save"
+                    Height="36"
+                    Width="100"
+                    HorizontalAlignment="Right"
+                    Click="BtnSave_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

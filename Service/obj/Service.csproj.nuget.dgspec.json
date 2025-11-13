@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\PRN212\\HospitalManagementSystem\\Service\\Service.csproj": {}
+    "D:\\DOTNET\\HospitalManagementSystem\\Service\\Service.csproj": {}
   },
   "projects": {
-    "D:\\PRN212\\HospitalManagementSystem\\Business\\Business.csproj": {
+    "D:\\DOTNET\\HospitalManagementSystem\\Business\\Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PRN212\\HospitalManagementSystem\\Business\\Business.csproj",
+        "projectUniqueName": "D:\\DOTNET\\HospitalManagementSystem\\Business\\Business.csproj",
         "projectName": "Business",
-        "projectPath": "D:\\PRN212\\HospitalManagementSystem\\Business\\Business.csproj",
-        "packagesPath": "C:\\Users\\ohtth\\.nuget\\packages\\",
-        "outputPath": "D:\\PRN212\\HospitalManagementSystem\\Business\\obj\\",
+        "projectPath": "D:\\DOTNET\\HospitalManagementSystem\\Business\\Business.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "D:\\DOTNET\\HospitalManagementSystem\\Business\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ohtth\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -69,20 +69,20 @@
         }
       }
     },
-    "D:\\PRN212\\HospitalManagementSystem\\DataAccess\\DataAccess.csproj": {
+    "D:\\DOTNET\\HospitalManagementSystem\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PRN212\\HospitalManagementSystem\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "D:\\DOTNET\\HospitalManagementSystem\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "D:\\PRN212\\HospitalManagementSystem\\DataAccess\\DataAccess.csproj",
-        "packagesPath": "C:\\Users\\ohtth\\.nuget\\packages\\",
-        "outputPath": "D:\\PRN212\\HospitalManagementSystem\\DataAccess\\obj\\",
+        "projectPath": "D:\\DOTNET\\HospitalManagementSystem\\DataAccess\\DataAccess.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "D:\\DOTNET\\HospitalManagementSystem\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ohtth\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -97,8 +97,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\PRN212\\HospitalManagementSystem\\Business\\Business.csproj": {
-                "projectPath": "D:\\PRN212\\HospitalManagementSystem\\Business\\Business.csproj"
+              "D:\\DOTNET\\HospitalManagementSystem\\Business\\Business.csproj": {
+                "projectPath": "D:\\DOTNET\\HospitalManagementSystem\\Business\\Business.csproj"
               }
             }
           }
@@ -160,20 +160,20 @@
         }
       }
     },
-    "D:\\PRN212\\HospitalManagementSystem\\Repository\\Repository.csproj": {
+    "D:\\DOTNET\\HospitalManagementSystem\\Repository\\Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PRN212\\HospitalManagementSystem\\Repository\\Repository.csproj",
+        "projectUniqueName": "D:\\DOTNET\\HospitalManagementSystem\\Repository\\Repository.csproj",
         "projectName": "Repository",
-        "projectPath": "D:\\PRN212\\HospitalManagementSystem\\Repository\\Repository.csproj",
-        "packagesPath": "C:\\Users\\ohtth\\.nuget\\packages\\",
-        "outputPath": "D:\\PRN212\\HospitalManagementSystem\\Repository\\obj\\",
+        "projectPath": "D:\\DOTNET\\HospitalManagementSystem\\Repository\\Repository.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "D:\\DOTNET\\HospitalManagementSystem\\Repository\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ohtth\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -188,11 +188,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\PRN212\\HospitalManagementSystem\\Business\\Business.csproj": {
-                "projectPath": "D:\\PRN212\\HospitalManagementSystem\\Business\\Business.csproj"
+              "D:\\DOTNET\\HospitalManagementSystem\\Business\\Business.csproj": {
+                "projectPath": "D:\\DOTNET\\HospitalManagementSystem\\Business\\Business.csproj"
               },
-              "D:\\PRN212\\HospitalManagementSystem\\DataAccess\\DataAccess.csproj": {
-                "projectPath": "D:\\PRN212\\HospitalManagementSystem\\DataAccess\\DataAccess.csproj"
+              "D:\\DOTNET\\HospitalManagementSystem\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "D:\\DOTNET\\HospitalManagementSystem\\DataAccess\\DataAccess.csproj"
               }
             }
           }
@@ -232,20 +232,20 @@
         }
       }
     },
-    "D:\\PRN212\\HospitalManagementSystem\\Service\\Service.csproj": {
+    "D:\\DOTNET\\HospitalManagementSystem\\Service\\Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PRN212\\HospitalManagementSystem\\Service\\Service.csproj",
+        "projectUniqueName": "D:\\DOTNET\\HospitalManagementSystem\\Service\\Service.csproj",
         "projectName": "Service",
-        "projectPath": "D:\\PRN212\\HospitalManagementSystem\\Service\\Service.csproj",
-        "packagesPath": "C:\\Users\\ohtth\\.nuget\\packages\\",
-        "outputPath": "D:\\PRN212\\HospitalManagementSystem\\Service\\obj\\",
+        "projectPath": "D:\\DOTNET\\HospitalManagementSystem\\Service\\Service.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "D:\\DOTNET\\HospitalManagementSystem\\Service\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ohtth\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -260,11 +260,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\PRN212\\HospitalManagementSystem\\Business\\Business.csproj": {
-                "projectPath": "D:\\PRN212\\HospitalManagementSystem\\Business\\Business.csproj"
+              "D:\\DOTNET\\HospitalManagementSystem\\Business\\Business.csproj": {
+                "projectPath": "D:\\DOTNET\\HospitalManagementSystem\\Business\\Business.csproj"
               },
-              "D:\\PRN212\\HospitalManagementSystem\\Repository\\Repository.csproj": {
-                "projectPath": "D:\\PRN212\\HospitalManagementSystem\\Repository\\Repository.csproj"
+              "D:\\DOTNET\\HospitalManagementSystem\\Repository\\Repository.csproj": {
+                "projectPath": "D:\\DOTNET\\HospitalManagementSystem\\Repository\\Repository.csproj"
               }
             }
           }

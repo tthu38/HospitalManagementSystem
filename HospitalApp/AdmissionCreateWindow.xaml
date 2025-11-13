@@ -1,0 +1,51 @@
+﻿<Window x:Class="HospitalApp.AdmissionCreateWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="New Admission"
+        Height="480" Width="520"
+        WindowStartupLocation="CenterScreen"
+        Background="{StaticResource BgBrush}">
+
+    <Grid Margin="20">
+        <Border Background="White"
+                CornerRadius="10"
+                Padding="25"
+                Effect="{StaticResource ShadowEffect}">
+            <StackPanel>
+                <TextBlock Text="New Admission"
+                           FontSize="22"
+                           FontWeight="Bold"
+                           Foreground="{StaticResource PrimaryBrush}"
+                           Margin="0,0,0,20"/>
+
+                <TextBlock Text="Patient"
+                           Foreground="{StaticResource TextGrayBrush}"/>
+                <ComboBox x:Name="cbPatient"
+                          DisplayMemberPath="FullName"
+                          SelectedValuePath="PatientId"
+                          Height="32"
+                          Margin="0,0,0,10"/>
+
+                <TextBlock Text="Room"
+                           Foreground="{StaticResource TextGrayBrush}"/>
+                <ComboBox x:Name="cbRoom"
+                          DisplayMemberPath="RoomNumber"
+                          SelectedValuePath="RoomId"
+                          Height="32"
+                          Margin="0,0,0,10"/>
+
+                <TextBlock Text="Admission Date"
+                           Foreground="{StaticResource TextGrayBrush}"/>
+                <DatePicker x:Name="dpAdmissionDate"
+                            Height="32"
+                            Margin="0,2,0,20"/>
+
+                <Button Content="Admit Patient"
+                        Height="38"
+                        HorizontalAlignment="Right"
+                        Style="{StaticResource PrimaryButton}"
+                        Click="BtnAdmit_Click"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>

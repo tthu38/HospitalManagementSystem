@@ -11,7 +11,12 @@ public partial class Billing
 
     public decimal? TotalAmount { get; set; }
 
-    public DateOnly? PaymentDate { get; set; }
+    public DateTime? PaymentDate { get; set; }  // ✅ đúng kiểu
+
+
+    public string? PaymentMethod { get; set; }
+
+    public bool? Paid { get; set; }
 
     public virtual Admission? Admission { get; set; }
 }

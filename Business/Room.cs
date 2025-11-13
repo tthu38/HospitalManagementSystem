@@ -11,5 +11,7 @@ public partial class Room
 
     public string? RoomType { get; set; }
 
+    public bool? IsAvailable { get; set; }
+
     public virtual ICollection<Admission> Admissions { get; set; } = new List<Admission>();
 }

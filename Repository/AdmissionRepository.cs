@@ -1,12 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using Business;
+using DataAccess;
 
 namespace Repository
 {
-    internal class AdmissionRepository
+    public class AdmissionRepository : IAdmissionRepository
     {
+        private readonly AdmissionDAO dao = AdmissionDAO.Instance;
+        public List<Admission> GetAll() => dao.GetAll();
+        public Admission? GetById(int id) => dao.GetById(id);
+        public void Add(Admission admission) => dao.Add(admission);
+        public void Discharge(int id) => dao.Discharge(id);
     }
 }

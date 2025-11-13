@@ -1,0 +1,65 @@
+﻿<UserControl x:Class="HospitalApp.BillingManagementWindow"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Billing Management"
+                   FontSize="22"
+                   FontWeight="Bold"
+                   Foreground="{StaticResource DarkBlue}"
+                   Margin="0,0,0,12"/>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="0,0,0,10">
+            <Button Content="Refresh"
+                    Width="100"
+                    Style="{StaticResource PrimaryButton}"
+                    Click="BtnRefresh_Click"/>
+
+            <Button Content="Add Bill"
+                    Width="110"
+                    Margin="10,0,0,0"
+                    Style="{StaticResource PrimaryButton}"
+                    Click="BtnAdd_Click"/>
+
+            <Button Content="Mark as Paid"
+                    Width="130"
+                    Margin="10,0,0,0"
+                    Style="{StaticResource PrimaryButton}"
+                    Click="BtnPaid_Click"/>
+
+            <Button Content="Generate Bill"
+                    Width="140"
+                    Margin="10,0,0,0"
+                    Style="{StaticResource PrimaryButton}"
+                    Click="BtnGenerate_Click"/>
+        </StackPanel>
+
+        <DataGrid x:Name="dgBills"
+                  Grid.Row="2"
+                  AutoGenerateColumns="False"
+                  IsReadOnly="True"
+                  SelectionMode="Single"
+                  CanUserAddRows="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Bill ID" Binding="{Binding BillId}" Width="70"/>
+                <DataGridTextColumn Header="Patient"
+                                    Binding="{Binding Admission.Patient.FullName}" Width="150"/>
+                <DataGridTextColumn Header="Room"
+                                    Binding="{Binding Admission.Room.RoomNumber}" Width="80"/>
+                <DataGridTextColumn Header="Total Amount"
+                                    Binding="{Binding TotalAmount}" Width="110"/>
+                <DataGridCheckBoxColumn Header="Paid"
+                                        Binding="{Binding Paid}" Width="60"/>
+                <DataGridTextColumn Header="Payment Method"
+                                    Binding="{Binding PaymentMethod}" Width="110"/>
+                <DataGridTextColumn Header="Payment Date"
+                                    Binding="{Binding PaymentDate}" Width="110"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>

@@ -17,7 +17,11 @@ public partial class Doctor
 
     public string Password { get; set; } = null!;
 
+    public bool? IsActive { get; set; }
+
     public virtual ICollection<Appointment> Appointments { get; set; } = new List<Appointment>();
 
     public virtual Department? Department { get; set; }
+
+    public virtual ICollection<Feedback> Feedbacks { get; set; } = new List<Feedback>();
 }

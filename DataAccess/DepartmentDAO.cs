@@ -1,12 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Business;
 
 namespace DataAccess
 {
-    internal class DepartmentDAO
+    public class DepartmentDAO
     {
+        public List<Department> GetAll()
+        {
+            using var context = new HospitalManagementContext();
+            return context.Departments.OrderBy(d => d.Name).ToList();
+        }
     }
 }

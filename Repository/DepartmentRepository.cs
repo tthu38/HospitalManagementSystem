@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using Business;
+using DataAccess;
 
 namespace Repository
 {
-    internal class DepartmentRepository
+    public class DepartmentRepository : IDepartmentRepository
     {
+        private readonly DepartmentDAO dao = new();
+        public List<Department> GetAll() => dao.GetAll();
     }
 }
