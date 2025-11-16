@@ -2,31 +2,117 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Doctor Profile"
-        Height="320" Width="480"
+        Height="440" Width="600"
         WindowStartupLocation="CenterScreen"
         Background="{StaticResource BgBrush}">
 
-    <Grid Margin="20">
+    <Grid Margin="25">
         <Border Background="White"
-                CornerRadius="8"
-                Padding="20"
+                CornerRadius="15"
+                Padding="25"
                 Effect="{StaticResource ShadowEffect}">
-            <StackPanel>
-                <TextBlock x:Name="txtName"
-                           FontSize="20"
-                           FontWeight="Bold"
-                           Foreground="{StaticResource PrimaryBrush}"
-                           Margin="0,0,0,10"/>
-                <TextBlock x:Name="txtDepartment" Margin="0,0,0,5"/>
-                <TextBlock x:Name="txtSpecialization" Margin="0,0,0,15"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
 
-                <Button Content="View Feedbacks"
-                        Width="150"
-                        Height="34"
-                        HorizontalAlignment="Left"
-                        Style="{StaticResource PrimaryButton}"
-                        Click="BtnFeedback_Click"/>
-            </StackPanel>
+                <!-- 🧑‍⚕️ Avatar bên trái -->
+                <StackPanel Grid.Column="0"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Center">
+
+                    <!-- Avatar meme bác sĩ -->
+                    <Border Width="150" Height="150"
+        CornerRadius="75"
+        Background="#FFF"
+        BorderBrush="{StaticResource PrimaryBrush}"
+        BorderThickness="2"
+        Effect="{StaticResource ShadowEffect}"
+        HorizontalAlignment="Center">
+
+                        <Viewbox>
+                            <Canvas Width="120" Height="120">
+                                <!-- Áo bác sĩ -->
+                                <Path Fill="#E0E0E0" Data="M30,80 L90,80 L90,120 L30,120 Z"/>
+
+                                <!-- Cổ áo trắng -->
+                                <Path Fill="White" Data="M35,75 L85,75 L80,85 L40,85 Z"/>
+
+                                <!-- Mặt -->
+                                <Rectangle Width="60" Height="50" Fill="#FFE0B2" RadiusX="6" RadiusY="6"
+                       Canvas.Left="30" Canvas.Top="25"/>
+
+                                <!-- Tóc bob đen -->
+                                <Path Fill="Black" Data="M25,35 Q55,5 85,35 L85,50 L25,50 Z"/>
+
+                                <!-- Mũ bác sĩ -->
+                                <Path Fill="White" Data="M30,10 L90,10 L85,30 L35,30 Z"/>
+                                <Rectangle Fill="#E53935" Width="14" Height="4" Canvas.Left="53" Canvas.Top="18"/>
+                                <Rectangle Fill="#E53935" Width="4" Height="14" Canvas.Left="58" Canvas.Top="13"/>
+
+                                <!-- Khẩu trang -->
+                                <Rectangle Width="60" Height="18" Fill="#E0E0E0" Stroke="Gray" StrokeThickness="1"
+                       Canvas.Left="30" Canvas.Top="45" RadiusX="4" RadiusY="4"/>
+
+                                <!-- Mắt buồn ngủ -->
+                                <Path Stroke="Black" StrokeThickness="2" Data="M40,55 Q45,52 50,55"/>
+                                <Path Stroke="Black" StrokeThickness="2" Data="M65,55 Q70,52 75,55"/>
+
+                                <!-- Tay áo -->
+                                <Path Fill="#E0E0E0" Data="M25,80 Q25,100 35,100 L35,90 Z"/>
+                                <Path Fill="#E0E0E0" Data="M95,80 Q95,100 85,100 L85,90 Z"/>
+                            </Canvas>
+                        </Viewbox>
+                    </Border>
+
+
+                    <TextBlock x:Name="txtName"
+                               Text="Dr. John Doe"
+                               FontSize="18"
+                               FontWeight="Bold"
+                               Foreground="{StaticResource PrimaryBrush}"
+                               HorizontalAlignment="Center"
+                               Margin="0,15,0,5"/>
+
+                    <TextBlock Text="Medical Specialist"
+                               FontStyle="Italic"
+                               Foreground="#666"
+                               FontSize="13"
+                               HorizontalAlignment="Center"/>
+                </StackPanel>
+
+                <!-- Thông tin bác sĩ -->
+                <StackPanel Grid.Column="1" Margin="30,10,10,10" VerticalAlignment="Center">
+                    <TextBlock Text="Doctor Profile"
+                               FontSize="22"
+                               FontWeight="Bold"
+                               Foreground="{StaticResource DarkBlue}"
+                               Margin="0,0,0,25"/>
+
+                    <StackPanel Margin="0,0,0,12">
+                        <TextBlock Text="Department:" FontWeight="Bold" FontSize="14"/>
+                        <TextBlock x:Name="txtDepartment" FontSize="14" Foreground="#444"/>
+                    </StackPanel>
+
+                    <StackPanel Margin="0,0,0,12">
+                        <TextBlock Text="Specialization:" FontWeight="Bold" FontSize="14"/>
+                        <TextBlock x:Name="txtSpecialization" FontSize="14" Foreground="#444"/>
+                    </StackPanel>
+
+                    <StackPanel Margin="0,0,0,12">
+                        <TextBlock Text="Experience:" FontWeight="Bold" FontSize="14"/>
+                        <TextBlock Text="10 years" FontSize="14" Foreground="#444"/>
+                    </StackPanel>
+
+                    <Button Content="View Feedbacks"
+                            Width="180" Height="36"
+                            Margin="0,20,0,0"
+                            Style="{StaticResource PrimaryButton}"
+                            HorizontalAlignment="Left"
+                            Click="BtnFeedback_Click"/>
+                </StackPanel>
+            </Grid>
         </Border>
     </Grid>
 </Window>

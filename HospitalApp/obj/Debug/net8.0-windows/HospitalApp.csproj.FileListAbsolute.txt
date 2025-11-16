@@ -216,3 +216,10 @@ D:\DOTNET\HospitalManagementSystem\HospitalApp\bin\Debug\net8.0-windows\PdfSharp
 D:\DOTNET\HospitalManagementSystem\HospitalApp\bin\Debug\net8.0-windows\PdfSharp.dll
 D:\DOTNET\HospitalManagementSystem\HospitalApp\bin\Debug\net8.0-windows\de\PdfSharp.Charting.resources.dll
 D:\DOTNET\HospitalManagementSystem\HospitalApp\bin\Debug\net8.0-windows\de\PdfSharp.resources.dll
+D:\DOTNET\HospitalManagementSystem\HospitalApp\bin\Debug\net8.0-windows\BouncyCastle.Cryptography.dll
+D:\DOTNET\HospitalManagementSystem\HospitalApp\bin\Debug\net8.0-windows\MailKit.dll
+D:\DOTNET\HospitalManagementSystem\HospitalApp\bin\Debug\net8.0-windows\MimeKit.dll
+D:\DOTNET\HospitalManagementSystem\HospitalApp\bin\Debug\net8.0-windows\System.Security.Cryptography.Pkcs.dll
+D:\DOTNET\HospitalManagementSystem\HospitalApp\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
+D:\DOTNET\HospitalManagementSystem\HospitalApp\obj\Debug\net8.0-windows\ForgotPasswordWindow.baml
+D:\DOTNET\HospitalManagementSystem\HospitalApp\obj\Debug\net8.0-windows\ForgotPasswordWindow.g.cs

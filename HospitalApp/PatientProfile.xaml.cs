@@ -20,6 +20,9 @@ namespace HospitalApp
             txtUsername.Text = _patient.Username;
             txtPassword.Password = _patient.Password;
             txtAddress.Text = _patient.Address;
+            txtEmail.Text = _patient.Email;
+            txtPhone.Text = _patient.Phone;
+
 
             if (_patient.Dob.HasValue)
                 dpDob.SelectedDate = _patient.Dob.Value.ToDateTime(TimeOnly.MinValue);
@@ -61,6 +64,9 @@ namespace HospitalApp
             _patient.Address = txtAddress.Text.Trim();
             _patient.Gender = gender;
             _patient.Dob = dob;
+            _patient.Email = txtEmail.Text.Trim();
+            _patient.Phone = txtPhone.Text.Trim();
+
 
             _service.Update(_patient);
             MessageBox.Show("Profile updated!");

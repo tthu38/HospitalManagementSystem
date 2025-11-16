@@ -1,5 +1,6 @@
 ﻿using Business;
 using Service;
+using System;
 using System.Linq;
 using System.Windows;
 
@@ -16,6 +17,9 @@ namespace HospitalApp
         {
             InitializeComponent();
             _loggedDoctor = doctor;
+
+            lblDoctorName.Text = _loggedDoctor.FullName;
+
             LoadAppointments();
         }
 
@@ -27,15 +31,25 @@ namespace HospitalApp
                 .ToList();
         }
 
-        private void BtnAppointment_Click(object sender, RoutedEventArgs e) => LoadAppointments();
-
-        private void BtnConfirm_Click(object sender, RoutedEventArgs e)
+        private Appointment? GetSelected()
         {
             if (dgAppointments.SelectedItem is not Appointment a)
             {
-                MessageBox.Show("Please select an appointment to confirm.");
-                return;
+                MessageBox.Show("Please select an appointment.");
+                return null;
             }
+            return a;
+        }
+
+        private void BtnAppointment_Click(object sender, RoutedEventArgs e)
+        {
+            LoadAppointments();
+        }
+
+        private void BtnConfirm_Click(object sender, RoutedEventArgs e)
+        {
+            var a = GetSelected();
+            if (a == null) return;
 
             if (a.Status == "Cancelled")
             {
@@ -56,15 +70,12 @@ namespace HospitalApp
 
         private void BtnCancel_Click(object sender, RoutedEventArgs e)
         {
-            if (dgAppointments.SelectedItem is not Appointment a)
-            {
-                MessageBox.Show("Please select an appointment to cancel.");
-                return;
-            }
+            var a = GetSelected();
+            if (a == null) return;
 
             if (a.Status == "Cancelled")
             {
-                MessageBox.Show("This appointment is already cancelled.");
+                MessageBox.Show("Already cancelled.");
                 return;
             }
 
@@ -76,7 +87,7 @@ namespace HospitalApp
 
             if (a.AppointmentDate <= DateTime.Now.AddDays(1))
             {
-                MessageBox.Show("Appointments can only be cancelled at least 1 day in advance.");
+                MessageBox.Show("You can only cancel at least 1 day in advance.");
                 return;
             }
 
@@ -85,14 +96,10 @@ namespace HospitalApp
             MessageBox.Show("Appointment cancelled successfully.");
         }
 
-
         private void BtnNotes_Click(object sender, RoutedEventArgs e)
         {
-            if (dgAppointments.SelectedItem is not Appointment a)
-            {
-                MessageBox.Show("Select an appointment first.");
-                return;
-            }
+            var a = GetSelected();
+            if (a == null) return;
 
             var win = new AppointmentNotesWindow(a);
             if (win.ShowDialog() == true)
@@ -104,7 +111,6 @@ namespace HospitalApp
             new DoctorPatientWindow().ShowDialog();
         }
 
-
         private void BtnAdmission_Click(object sender, RoutedEventArgs e)
         {
             new DoctorAdmissionWindow().ShowDialog();
@@ -112,10 +118,8 @@ namespace HospitalApp
 
         private void BtnLogout_Click(object sender, RoutedEventArgs e)
         {
-            // Khi bác sĩ bấm Logout, quay lại màn hình đăng nhập
             new HomeWindow().Show();
-            this.Close();
+            Close();
         }
-
     }
 }

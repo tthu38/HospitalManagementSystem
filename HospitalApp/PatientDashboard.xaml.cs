@@ -98,7 +98,18 @@ namespace HospitalApp
         {
             var list = _patientService.GetAdmissions(_loggedPatient.PatientId);
             dgAppointments.ItemsSource = list;
+
+            // 🩵 Ẩn 2 cột không cần
+            if (dgAppointments.Columns.Count > 0)
+            {
+                var colBillings = dgAppointments.Columns.FirstOrDefault(c => c.Header?.ToString() == "Billings");
+                var colPatient = dgAppointments.Columns.FirstOrDefault(c => c.Header?.ToString() == "Patient");
+
+                if (colBillings != null) colBillings.Visibility = Visibility.Collapsed;
+                if (colPatient != null) colPatient.Visibility = Visibility.Collapsed;
+            }
         }
+
 
         private void BtnDoctors_Click(object sender, RoutedEventArgs e)
         {

@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
 D:\DOTNET\HospitalManagementSystem\HospitalApp\App.xaml
-26-1354879036
+271413956739
 
-30314947028
-243-98391319
-AdminDashboard.xaml;AdmissionCreateWindow.xaml;AppointmentCreateWindow.xaml;AppointmentNotesWindow.xaml;BillingCreateWindow.xaml;BillingManagementWindow.xaml;ChatBotWindow.xaml;DoctorAdmissionWindow.xaml;DoctorBrowseWindow.xaml;DoctorDashboard.xaml;DoctorDetailWindow.xaml;DoctorListWindow.xaml;DoctorPatientWindow.xaml;DoctorProfile.xaml;FeedbackWindow.xaml;HomeWindow.xaml;LoginWindow.xaml;MainWindow.xaml;PatientDashboard.xaml;PatientDetailWindow.xaml;PatientListWindow.xaml;PatientProfile.xaml;ProfileWindow.xaml;RegisterWindow.xaml;RoomDetailWindow.xaml;RoomListWindow.xaml;
+31-2119702316
+246-400140735
+AdminDashboard.xaml;AdmissionCreateWindow.xaml;AppointmentCreateWindow.xaml;AppointmentNotesWindow.xaml;BillingCreateWindow.xaml;BillingManagementWindow.xaml;ChatBotWindow.xaml;DoctorAdmissionWindow.xaml;DoctorBrowseWindow.xaml;DoctorDashboard.xaml;DoctorDetailWindow.xaml;DoctorListWindow.xaml;DoctorPatientWindow.xaml;DoctorProfile.xaml;FeedbackWindow.xaml;ForgotPasswordWindow.xaml;HomeWindow.xaml;LoginWindow.xaml;MainWindow.xaml;PatientDashboard.xaml;PatientDetailWindow.xaml;PatientListWindow.xaml;PatientProfile.xaml;ProfileWindow.xaml;RegisterWindow.xaml;RoomDetailWindow.xaml;RoomListWindow.xaml;
 
 False
 

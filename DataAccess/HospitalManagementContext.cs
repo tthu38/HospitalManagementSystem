@@ -180,10 +180,12 @@ public partial class HospitalManagementContext : DbContext
 
             entity.Property(e => e.Address).HasMaxLength(200);
             entity.Property(e => e.Dob).HasColumnName("DOB");
+            entity.Property(e => e.Email).HasMaxLength(100);
             entity.Property(e => e.FullName).HasMaxLength(100);
             entity.Property(e => e.Gender).HasMaxLength(10);
             entity.Property(e => e.IsActive).HasDefaultValue(true);
             entity.Property(e => e.Password).HasMaxLength(100);
+            entity.Property(e => e.Phone).HasMaxLength(20);
             entity.Property(e => e.Username).HasMaxLength(100);
         });
 

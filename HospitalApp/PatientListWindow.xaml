@@ -44,6 +44,8 @@
                 <DataGridTextColumn Header="DOB" Binding="{Binding Dob}" Width="100"/>
                 <DataGridTextColumn Header="Address" Binding="{Binding Address}" Width="200"/>
                 <DataGridTextColumn Header="Username" Binding="{Binding Username}" Width="120"/>
+                <DataGridTextColumn Header="Email" Binding="{Binding Email}" Width="150"/>
+                <DataGridTextColumn Header="Phone" Binding="{Binding Phone}" Width="120"/>
                 <DataGridCheckBoxColumn Header="Active" Binding="{Binding IsActive}" Width="80"/>
             </DataGrid.Columns>
         </DataGrid>

@@ -28,6 +28,9 @@ namespace HospitalApp
                 txtPassword.Password = _editingPatient.Password;
                 txtAddress.Text = _editingPatient.Address;
                 dpDob.SelectedDate = _editingPatient.Dob?.ToDateTime(TimeOnly.MinValue);
+                txtEmail.Text = _editingPatient.Email;
+                txtPhone.Text = _editingPatient.Phone;
+
 
                 // chọn đúng gender
                 foreach (ComboBoxItem item in cbGender.Items)
@@ -74,6 +77,9 @@ namespace HospitalApp
                     Address = txtAddress.Text.Trim(),
                     Username = txtUsername.Text.Trim(),
                     Password = txtPassword.Password.Trim(),
+                    Email = txtEmail.Text.Trim(),
+                    Phone = txtPhone.Text.Trim(),
+
                     Dob = dob,
                     IsActive = true
                 };
@@ -89,6 +95,9 @@ namespace HospitalApp
                 _editingPatient.Username = txtUsername.Text.Trim();
                 _editingPatient.Password = txtPassword.Password.Trim();
                 _editingPatient.Dob = dob;
+                _editingPatient.Email = txtEmail.Text.Trim();
+                _editingPatient.Phone = txtPhone.Text.Trim();
+
                 _service.Update(_editingPatient);
                 MessageBox.Show("Patient updated successfully!");
             }

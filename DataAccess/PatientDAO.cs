@@ -11,7 +11,7 @@ namespace DataAccess
         {
             using var context = new HospitalManagementContext();
             return context.Patients
-                            .Where(p => p.IsActive == true || p.IsActive == null)
+                          .Where(p => p.IsActive == true || p.IsActive == null)
                           .ToList();
         }
 
@@ -25,6 +25,8 @@ namespace DataAccess
         {
             using var context = new HospitalManagementContext();
             patient.IsActive ??= true;
+
+            // ✅ đảm bảo các trường mới (Email, Phone) cũng được lưu
             context.Patients.Add(patient);
             context.SaveChanges();
         }
@@ -42,6 +44,10 @@ namespace DataAccess
             existing.IsActive = patient.IsActive;
             existing.Username = patient.Username;
             existing.Password = patient.Password;
+
+            // ✅ thêm Email và Phone vào Update
+            existing.Email = patient.Email;
+            existing.Phone = patient.Phone;
 
             context.SaveChanges();
         }

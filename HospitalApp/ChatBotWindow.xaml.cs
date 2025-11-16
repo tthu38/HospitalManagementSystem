@@ -3,8 +3,10 @@ using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Text.Json;
-using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Media;
+using Business;
 using Service;
 
 namespace HospitalApp
@@ -15,9 +17,8 @@ namespace HospitalApp
         private readonly DoctorService _doctorService = new();
         private readonly RoomService _roomService = new();
 
-        //  private const string GeminiApiKey = "AIzaSyDYK1kBmcDE7vh99Qz2e_q83XPigK3SaIY";
         private const string GeminiApiKey = "AIzaSyAos6ExaIcyvj2PIcdztQBsfcleNAntYBU";
-        private const string GeminiModel = "gemini-2.0-flash"; // ✅ dùng model ổn định (có sẵn trong v1beta)
+        private const string GeminiModel = "gemini-2.0-flash";
 
         public ChatBotWindow()
         {
@@ -34,25 +35,25 @@ namespace HospitalApp
             var userInput = txtInput.Text.Trim();
             if (string.IsNullOrEmpty(userInput)) return;
 
-            AppendLine($"👤 {userInput}");
+            AddMessageBubble(userInput, true);
             txtInput.Clear();
 
             try
             {
-                // 🏥 Ghép dữ liệu bệnh viện thật (doctors + available rooms)
+                // Collect hospital real data
                 var doctors = _doctorService.GetAll()
                     .Select(d => $"{d.FullName} ({d.Specialization})")
                     .ToList();
 
-                var availableRooms = _roomService.GetAvailable()
+                var rooms = _roomService.GetAvailable()
                     .Select(r => $"{r.RoomNumber} - {r.RoomType}")
                     .ToList();
 
                 string hospitalData =
-                    $"Danh sách bác sĩ: {string.Join(", ", doctors)}. " +
-                    $"Phòng trống: {string.Join(", ", availableRooms)}.";
+                    $"Bác sĩ hiện có: {string.Join(", ", doctors)}.\n" +
+                    $"Phòng còn trống: {string.Join(", ", rooms)}.";
 
-                // 🧠 Tạo prompt kết hợp dữ liệu thật
+                // Build request
                 var payload = new
                 {
                     contents = new[]
@@ -61,8 +62,8 @@ namespace HospitalApp
                             parts = new[]
                             {
                                 new {
-                                    text = $"Bạn là trợ lý ảo của bệnh viện. Dưới đây là dữ liệu thật:\n{hospitalData}\n\n" +
-                                           $"Dựa trên dữ liệu này, hãy trả lời câu hỏi sau của người dùng một cách ngắn gọn và thân thiện:\n{userInput}"
+                                    text = $"Bạn là trợ lý ảo của bệnh viện.\nDữ liệu thật: {hospitalData}\n\n" +
+                                           $"Câu hỏi: {userInput}"
                                 }
                             }
                         }
@@ -80,29 +81,44 @@ namespace HospitalApp
 
                 if (!res.IsSuccessStatusCode)
                 {
-                    AppendLine($"⚠️ Lỗi API: {res.StatusCode}\n{body}");
+                    AddMessageBubble($"⚠️ API Error: {res.StatusCode}", false);
                     return;
                 }
 
-                using var doc = JsonDocument.Parse(body);
-                var reply = doc.RootElement
+                using var docJson = JsonDocument.Parse(body);
+                var reply = docJson.RootElement
                     .GetProperty("candidates")[0]
                     .GetProperty("content")
                     .GetProperty("parts")[0]
                     .GetProperty("text")
                     .GetString();
 
-                AppendLine($"🤖 {reply}");
+                AddMessageBubble(reply, false);
             }
             catch (Exception ex)
             {
-                AppendLine($"⚠️ Exception: {ex.Message}");
+                AddMessageBubble($"⚠️ {ex.Message}", false);
             }
         }
 
-        private void AppendLine(string text)
+        private void AddMessageBubble(string text, bool isUser)
         {
-            txtConversation.Text += text + Environment.NewLine + Environment.NewLine;
+            var bubble = new Border
+            {
+                Style = (Style)FindResource(isUser ? "UserBubbleStyle" : "BotBubbleStyle")
+            };
+
+            var tb = new TextBlock
+            {
+                Text = text,
+                Style = (Style)FindResource("BubbleTextStyle"),
+                Foreground = isUser ? Brushes.White : Brushes.Black
+            };
+
+            bubble.Child = tb;
+
+            chatPanel.Children.Add(bubble);
+            scroll.ScrollToBottom();
         }
     }
 }

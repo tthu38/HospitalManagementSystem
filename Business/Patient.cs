@@ -19,6 +19,10 @@ public partial class Patient
 
     public string Password { get; set; } = null!;
 
+    public string? Email { get; set; }
+
+    public string? Phone { get; set; }
+
     public bool? IsActive { get; set; }
 
     public virtual ICollection<Admission> Admissions { get; set; } = new List<Admission>();

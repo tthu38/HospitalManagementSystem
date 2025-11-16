@@ -3,7 +3,61 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Doctor Dashboard"
         Height="720" Width="1200"
-        WindowStartupLocation="CenterScreen" Background="#F5F5F5">
+        WindowStartupLocation="CenterScreen"
+        Background="#F0F2F5">
+
+    <Window.Resources>
+
+        <!-- SIDEBAR BUTTON STYLE -->
+        <Style x:Key="SidebarBtn" TargetType="Button">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Height" Value="42"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="Padding" Value="15,0"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Margin" Value="0,5"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" CornerRadius="6">
+                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#184B95"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <!-- DATAGRID HEADER STYLE -->
+        <Style TargetType="DataGridColumnHeader">
+            <Setter Property="Background" Value="#EEF3FF"/>
+            <Setter Property="Foreground" Value="#1A3C72"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        </Style>
+
+        <!-- DATAGRID ROW STYLE -->
+        <Style TargetType="DataGridRow">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Height" Value="38"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#F0F6FF"/>
+                </Trigger>
+                <Trigger Property="IsSelected" Value="True">
+                    <Setter Property="Background" Value="#D6E8FF"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+    </Window.Resources>
 
     <Grid>
         <Grid.ColumnDefinitions>
@@ -12,44 +66,48 @@
         </Grid.ColumnDefinitions>
 
         <!-- SIDEBAR -->
-        <Border Grid.Column="0" Background="{StaticResource DarkBlue}">
+        <Border Grid.Column="0" Background="#0A3D62">
             <StackPanel Margin="20,30,10,20">
+
                 <TextBlock Text="Doctor Panel"
-               FontSize="22"
-               FontWeight="Bold"
-               Foreground="White"
-               Margin="0,0,0,25"/>
+                           FontSize="22"
+                           FontWeight="Bold"
+                           Foreground="White"
+                           Margin="0,0,0,25"/>
 
-                <Button Content="My Appointments"
-            Style="{StaticResource SidebarButtonStyle}"
-            Click="BtnAppointment_Click"/>
+                <Button Style="{StaticResource SidebarBtn}"
+                        Content="📅 My Appointments"
+                        Click="BtnAppointment_Click"/>
 
-                <Button Content="Patients"
-            Style="{StaticResource SidebarButtonStyle}"
-            Click="BtnPatient_Click"/>
+                <Button Style="{StaticResource SidebarBtn}"
+                        Content="👥 Patients"
+                        Click="BtnPatient_Click"/>
 
-                <Button Content="Admissions"
-            Style="{StaticResource SidebarButtonStyle}"
-            Click="BtnAdmission_Click"/>
+                <Button Style="{StaticResource SidebarBtn}"
+                        Content="🏥 Admissions"
+                        Click="BtnAdmission_Click"/>
 
                 <Button Content="Logout"
-            Margin="0,40,0,0"
-            Height="38"
-            Background="{StaticResource AccentRed}"
-            Foreground="White"
-            FontWeight="Bold"
-            Click="BtnLogout_Click"/>
+                        Height="38"
+                        Margin="0,40,0,0"
+                        Background="#D9534F"
+                        Foreground="White"
+                        FontWeight="Bold"
+                        BorderThickness="0"
+                        Cursor="Hand"
+                        Click="BtnLogout_Click"/>
             </StackPanel>
-
         </Border>
 
-        <!-- MAIN -->
+        <!-- MAIN CONTENT -->
         <Border Grid.Column="1"
-        Margin="20"
-        CornerRadius="8"
-        Background="White"
-        Padding="20"
-        Effect="{StaticResource ShadowEffect}">
+                Margin="20"
+                CornerRadius="12"
+                Background="White"
+                Padding="25"
+                BorderBrush="#E5E5E5"
+                BorderThickness="1">
+
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
@@ -57,47 +115,84 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
-                <TextBlock Text="My Appointments"
-                   FontSize="20"
-                   FontWeight="Bold"
-                   Foreground="{StaticResource DarkBlue}"
-                   Margin="0,0,0,15"/>
+                <!-- HEADER -->
+                <DockPanel Grid.Row="0" Margin="0,0,0,20">
+                    <StackPanel DockPanel.Dock="Left">
+                        <TextBlock Text="My Appointments"
+                                   FontSize="22"
+                                   FontWeight="Bold"
+                                   Foreground="#0A3D62"/>
+                    </StackPanel>
 
+                    <StackPanel DockPanel.Dock="Right" Orientation="Horizontal">
+                        <Ellipse Width="48" Height="48" Fill="#D0E3FF"/>
+                        <TextBlock x:Name="lblDoctorName"
+                                   Margin="10,10,0,0"
+                                   FontWeight="Bold"
+                                   FontSize="16"
+                                   Foreground="#0A3D62"/>
+                    </StackPanel>
+                </DockPanel>
+
+                <!-- ACTION BUTTONS -->
                 <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="0,0,0,10">
                     <Button Content="Confirm"
-                    Width="110"
-                    Style="{StaticResource PrimaryButton}"
-                    Click="BtnConfirm_Click"/>
+                            Width="120"
+                            Style="{StaticResource PrimaryButton}"
+                            Click="BtnConfirm_Click"/>
+
                     <Button Content="Cancel"
-                    Width="110"
-                    Margin="10,0,0,0"
-                    Style="{StaticResource PrimaryButton}"
-                    Click="BtnCancel_Click"/>
+                            Width="120"
+                            Margin="10,0,0,0"
+                            Style="{StaticResource PrimaryButton}"
+                            Click="BtnCancel_Click"/>
+
                     <Button Content="Add Notes"
-                    Width="120"
-                    Margin="10,0,0,0"
-                    Style="{StaticResource PrimaryButton}"
-                    Click="BtnNotes_Click"/>
+                            Width="140"
+                            Margin="10,0,0,0"
+                            Style="{StaticResource PrimaryButton}"
+                            Click="BtnNotes_Click"/>
+
                     <Button Content="Refresh"
-                    Width="100"
-                    Margin="10,0,0,0"
-                    Style="{StaticResource PrimaryButton}"
-                    Click="BtnAppointment_Click"/>
+                            Width="110"
+                            Margin="10,0,0,0"
+                            Style="{StaticResource PrimaryButton}"
+                            Click="BtnAppointment_Click"/>
                 </StackPanel>
 
+                <!-- DATAGRID -->
                 <DataGrid x:Name="dgAppointments"
-                  Grid.Row="2"
-                  AutoGenerateColumns="False"
-                  IsReadOnly="True">
-                    <DataGrid.Columns>
-                        <DataGridTextColumn Header="Patient" Binding="{Binding Patient.FullName}" Width="150"/>
-                        <DataGridTextColumn Header="Date" Binding="{Binding AppointmentDate}" Width="120"/>
-                        <DataGridTextColumn Header="Status" Binding="{Binding Status}" Width="100"/>
-                        <DataGridTextColumn Header="Notes" Binding="{Binding Notes}" Width="200"/>
-                    </DataGrid.Columns>
-                </DataGrid>
-            </Grid>
-        </Border>
+                          Grid.Row="2"
+                          AutoGenerateColumns="False"
+                          IsReadOnly="True"
+                          BorderThickness="1"
+                          BorderBrush="#E2E2E2"
+                          RowHeaderWidth="0">
 
+                    <DataGrid.Columns>
+
+                        <DataGridTextColumn Header="Patient"
+                                            Binding="{Binding Patient.FullName}"
+                                            Width="150"/>
+
+                        <DataGridTextColumn Header="Date"
+                                            Binding="{Binding AppointmentDate, StringFormat=\{0:dd/MM/yyyy HH:mm\}}"
+                                            Width="160"/>
+
+                        <DataGridTextColumn Header="Status"
+                                            Binding="{Binding Status}"
+                                            Width="120"/>
+
+                        <DataGridTextColumn Header="Notes"
+                                            Binding="{Binding Notes}"
+                                            Width="350"/>
+
+                    </DataGrid.Columns>
+
+                </DataGrid>
+
+            </Grid>
+
+        </Border>
     </Grid>
 </Window>

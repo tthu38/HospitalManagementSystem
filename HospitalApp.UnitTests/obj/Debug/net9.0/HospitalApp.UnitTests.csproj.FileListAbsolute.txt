@@ -166,3 +166,8 @@ D:\DOTNET\HospitalManagementSystem\HospitalApp.UnitTests\obj\Debug\net9.0\refint
 D:\DOTNET\HospitalManagementSystem\HospitalApp.UnitTests\obj\Debug\net9.0\HospitalApp.UnitTests.pdb
 D:\DOTNET\HospitalManagementSystem\HospitalApp.UnitTests\obj\Debug\net9.0\HospitalApp.UnitTests.genruntimeconfig.cache
 D:\DOTNET\HospitalManagementSystem\HospitalApp.UnitTests\obj\Debug\net9.0\ref\HospitalApp.UnitTests.dll
+D:\DOTNET\HospitalManagementSystem\HospitalApp.UnitTests\bin\Debug\net9.0\BouncyCastle.Cryptography.dll
+D:\DOTNET\HospitalManagementSystem\HospitalApp.UnitTests\bin\Debug\net9.0\MailKit.dll
+D:\DOTNET\HospitalManagementSystem\HospitalApp.UnitTests\bin\Debug\net9.0\MimeKit.dll
+D:\DOTNET\HospitalManagementSystem\HospitalApp.UnitTests\bin\Debug\net9.0\System.Security.Cryptography.Pkcs.dll
+D:\DOTNET\HospitalManagementSystem\HospitalApp.UnitTests\bin\Debug\net9.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll

@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Linq;
 using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Media;
 using Business;
 using Service;
 
@@ -11,13 +14,49 @@ namespace HospitalApp
         private readonly DoctorService _doctorService = new();
         private readonly int _patientId;
 
+        private int selectedRating = 0;
+
         public FeedbackWindow(int patientId)
         {
             InitializeComponent();
             _patientId = patientId;
 
             cbDoctor.ItemsSource = _doctorService.GetAll();
-            cbDoctor.DisplayMemberPath = "FullName";
+        }
+
+        private void cbDoctor_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (cbDoctor.SelectedItem is Doctor doc)
+            {
+                doctorCard.Visibility = Visibility.Visible;
+                ratingPanel.Visibility = Visibility.Visible;
+                btnSubmit.IsEnabled = true;
+
+                txtDoctorName.Text = doc.FullName;
+                txtDoctorDept.Text = doc.Department?.Name ?? "";
+
+            }
+        }
+
+        private void Star_Click(object sender, RoutedEventArgs e)
+        {
+            if (sender is Button btn && int.TryParse(btn.Tag.ToString(), out int v))
+            {
+                selectedRating = v;
+                UpdateStars();
+            }
+        }
+
+        private void UpdateStars()
+        {
+            foreach (Button btn in LogicalTreeHelper.GetChildren(this)
+                     .OfType<Button>()
+                     .Where(b => b.Tag != null))
+            {
+                int v = int.Parse(btn.Tag.ToString());
+                btn.Content = (v <= selectedRating) ? "★" : "☆";
+                btn.Foreground = (v <= selectedRating) ? Brushes.Gold : Brushes.Gray;
+            }
         }
 
         private void BtnSubmit_Click(object sender, RoutedEventArgs e)
@@ -28,15 +67,11 @@ namespace HospitalApp
                 return;
             }
 
-            int? rating = null;
-            if (int.TryParse(txtRating.Text, out int r))
-                rating = r;
-
             var f = new Feedback
             {
                 PatientId = _patientId,
                 DoctorId = doc.DoctorId,
-                Rating = rating,
+                Rating = selectedRating,
                 Comment = txtComment.Text,
                 CreatedAt = DateTime.Now
             };

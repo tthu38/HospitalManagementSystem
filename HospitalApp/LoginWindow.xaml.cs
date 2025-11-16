@@ -61,5 +61,15 @@ namespace HospitalApp
                     break;
             }
         }
+
+        private void BtnForgotPassword_Click(object sender, RoutedEventArgs e)
+        {
+            var forgotWin = new ForgotPasswordWindow();
+            forgotWin.ShowDialog();
+        }
+
+       
+
+
     }
 }

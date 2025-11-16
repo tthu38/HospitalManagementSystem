@@ -17,8 +17,16 @@ namespace HospitalApp
 
         private void BtnRegister_Click(object sender, RoutedEventArgs e)
         {
-            new RegisterWindow().Show();
-            this.Close();
+            var win = new RegisterWindow();
+            win.ShowDialog();   // ✅ mở dạng Dialog
         }
+
+        private void BtnHome_Click(object sender, RoutedEventArgs e)
+        {
+            // Ví dụ: làm mới trang hoặc hiển thị thông báo
+            MessageBox.Show("You are already on the Home page.");
+        }
+
+
     }
 }
