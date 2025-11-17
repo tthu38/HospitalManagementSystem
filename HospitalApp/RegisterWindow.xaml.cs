@@ -97,7 +97,7 @@ namespace HospitalApp
                 Password = txtPassword.Password.Trim(),
                 Dob = dob,
                 IsActive = true,
-                Email = txtEmail.Text.Trim(),     // ✅ Thêm dòng này
+                Email = txtEmail.Text.Trim(),     
                 Phone = txtPhone.Text.Trim(),
             };
 

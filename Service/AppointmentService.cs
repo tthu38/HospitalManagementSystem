@@ -13,7 +13,6 @@ namespace Service
         public void Confirm(int id) => _repo.UpdateStatus(id, "Confirmed");
         public void Cancel(int id) => _repo.UpdateStatus(id, "Cancelled");
 
-        // ✅ mới: cập nhật notes
         public void UpdateNotes(int id, string? notes) => _repo.UpdateNotes(id, notes);
 
 

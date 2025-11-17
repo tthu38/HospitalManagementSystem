@@ -124,7 +124,6 @@ namespace HospitalApp
         {
             try
             {
-                // ✅ Dùng ShowDialog() thay vì Show() để tránh lỗi "window already closed"
                 var chat = new ChatBotWindow
                 {
                     Owner = this

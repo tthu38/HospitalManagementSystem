@@ -16,5 +16,5 @@ D:\DOTNET\HospitalManagementSystem\HospitalApp\App.xaml
 246-400140735
 AdminDashboard.xaml;AdmissionCreateWindow.xaml;AppointmentCreateWindow.xaml;AppointmentNotesWindow.xaml;BillingCreateWindow.xaml;BillingManagementWindow.xaml;ChatBotWindow.xaml;DoctorAdmissionWindow.xaml;DoctorBrowseWindow.xaml;DoctorDashboard.xaml;DoctorDetailWindow.xaml;DoctorListWindow.xaml;DoctorPatientWindow.xaml;DoctorProfile.xaml;FeedbackWindow.xaml;ForgotPasswordWindow.xaml;HomeWindow.xaml;LoginWindow.xaml;MainWindow.xaml;PatientDashboard.xaml;PatientDetailWindow.xaml;PatientListWindow.xaml;PatientProfile.xaml;ProfileWindow.xaml;RegisterWindow.xaml;RoomDetailWindow.xaml;RoomListWindow.xaml;
 
-False
+True
 

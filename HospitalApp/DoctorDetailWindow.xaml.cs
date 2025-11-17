@@ -10,10 +10,8 @@ namespace HospitalApp
         private readonly DepartmentService _deptService = new();
         private readonly Doctor? _editingDoctor;
 
-        // Constructor mặc định (Add)
         public DoctorDetailWindow() : this(null) { }
 
-        // Constructor có tham số (Edit)
         public DoctorDetailWindow(Doctor? doctor)
         {
             InitializeComponent();
@@ -31,7 +29,6 @@ namespace HospitalApp
                 txtUsername.Text = _editingDoctor.Username;
                 txtPassword.Password = _editingDoctor.Password;
 
-                // chọn department
                 if (_editingDoctor.Department != null)
                 {
                     cbDepartment.SelectedItem = _editingDoctor.Department;
@@ -96,7 +93,6 @@ namespace HospitalApp
             Close();
         }
 
-        // ✅ Sửa lỗi ở đây
         private void BtnCancel_Click(object sender, RoutedEventArgs e)
         {
             Close();

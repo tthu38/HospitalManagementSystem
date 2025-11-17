@@ -52,7 +52,7 @@ namespace HospitalApp {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/HospitalApp;V1.0.0.0;component/homewindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/HospitalApp;component/homewindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\HomeWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

@@ -124,7 +124,7 @@ namespace HospitalApp {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/HospitalApp;V1.0.0.0;component/patientprofile.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/HospitalApp;component/patientprofile.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\PatientProfile.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

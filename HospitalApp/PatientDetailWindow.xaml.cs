@@ -11,10 +11,8 @@ namespace HospitalApp
         private readonly PatientService _service = new();
         private readonly Patient? _editingPatient;
 
-        // Constructor mặc định (add)
         public PatientDetailWindow() : this(null) { }
 
-        // Constructor có tham số (edit)
         public PatientDetailWindow(Patient? patient)
         {
             InitializeComponent();
